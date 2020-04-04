@@ -1,0 +1,9 @@
+*.gem
+.bundle
+.sass-cache
+_site/
+Gemfile.lock
+**/.ruby-version
+jekyll-export
+.idea
+README.md

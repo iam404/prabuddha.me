@@ -1,0 +1,31 @@
+<!-- h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>My Thoughts</h2 -->
+<!-- p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">Articles I've written.</p-->
+<div class="mb-4">
+  {% for post in paginator.posts %}
+    <div class="col-post">
+      {% include post-card.html %}
+    </div>
+  {% endfor %}
+</div>
+
+<!-- Pagination links -->
+<nav class="paginate-container" aria-label="Pagination">
+<div class="pagination">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path }}" class="previous previous_page">
+    Previous
+  </a>
+  {% else %}
+  <span class="previous previous_page">Previous</span>
+  {% endif %}
+  <span class="page_number ">
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+  <span class="next ">Next</span>
+  {% endif %}
+</div>
+</nav>
+

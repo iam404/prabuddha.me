@@ -7,13 +7,8 @@
     <div {% if site.style == 'dark' %}class="text-white"{% endif %}>
       {{ content }}
     </div>
-    <div class="seperator-1 border-md-top">
-    </div>
-    {% unless posts_total == 0 %}
-      <div class="my-6">
-        {% include thoughts.html %}
-      </div>
-    {% endunless %}
+   <!-- <div class="seperator-1 border-md-top"></div> -->
+
   </div>
 {% else %}
   <div class="d-md-flex min-height-full {% unless site.style == 'dark' %}border-md-bottom{% endunless %}">
@@ -27,10 +22,6 @@
           <div class="f4 {% if site.style == 'dark' %}text-white{% endif %} mb-6">
             {{ content }}
           </div>
-        {% endunless %}
-
-        {% unless posts_total == 0 %}
-          {% include thoughts.html %}
         {% endunless %}
       </div>
     </div>

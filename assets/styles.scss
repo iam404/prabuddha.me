@@ -11,7 +11,7 @@
 
 .container-1{
   padding: inherit;
-  padding-top: 50px;
+  padding-top: 60px;
   text-align: center;
   padding-bottom: 30px;
 }
@@ -71,4 +71,9 @@
 
 .min-height-full {
   min-height: 100vh;
+}
+
+a:hover {
+  text-decoration: solid;
+  color: black;
 }

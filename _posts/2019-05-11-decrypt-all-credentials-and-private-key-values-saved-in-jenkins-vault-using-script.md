@@ -4,6 +4,7 @@ date: 2019-05-11T09:58:25+00:00
 author: Prabuddha
 layout: post
 published: true
+permalink: /decrypt-all-credentials-and-private-key-values-saved-in-jenkins-vault-using-script/
 categories:
   - DevOps
 ---

@@ -1,5 +1,4 @@
 url: https://prabuddha.me
-user.name: Prabuddha Chakraborty
 bio: >
   Saving tech stuff, just for the record.
   Say hello at mail@prabuddha.me
@@ -41,23 +40,11 @@ projects:
     # - repo-name
 
 social_media:
-  # behance: your_username
-  # dribbble: your_username
-   facebook: your_username
-  # hackerrank: your_username
-  # instagram: your_username
-  # keybase: your_username
-   linkedin: your_username
-  # mastodon: your_username
-  # medium: your_username
-   stackoverflow: your_user_id
-  # telegram: your_username
-   twitter: your_username
-  # unsplash: your_username
-  # vk: your_username
-   website: http://your_website_url
-   github: http://
-  # youtube: your_username
+   facebook: prabuddha.nike13
+   linkedin: prabuddha90
+   stackoverflow: 4293543/prabuddha-chakraborty
+   twitter: _iam404
+   website: https://prabuddha.me
 
 #topics:
 #  - name: CSS

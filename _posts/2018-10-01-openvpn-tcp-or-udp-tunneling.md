@@ -4,8 +4,8 @@ title: 'OpenVPN &#8211; TCP or UDP tunneling ?'
 date: 2018-10-01T02:46:08+00:00
 author: Prabuddha
 layout: post
-guid: https://prabuddha.me/?p=770
 permalink: /openvpn-tcp-or-udp-tunneling/
+published: false
 categories:
   - linux
   - security

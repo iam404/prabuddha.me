@@ -6,15 +6,14 @@ author: Prabuddha
 layout: post
 guid: https://prabuddha.me/?p=774
 permalink: /optimizing-openvpn-throughput/
+published: false
 categories:
   - DevOps
   - linux
   - security
   - unix
 ---
-Believe it or not, the default OpenVPN configuration is likely not optimized for our link. It probably works but its throughput could possibly be improved if we take the time to optimize it.
 
-For the proper optimization of the link, both ends of the tunnel should be known beforehand. That means when we are using OpenVPN in server mode serving different clients that we do not have control over, the best we could do is to optimize our own end of the tunnel and use appropriate default settings suitable for the most clients. In this post however, our main interest is OpenVPN <code>p2p</code> or <code>point-to-point</code> mode which you most likely would use to connect different parts of your networks together.
 <h2 id="comp-lzo">comp-lzo</h2>
 OpenVPN can use LZO to compress each packets individually. If we load compression module on one side, it must be loaded on the other side as well. Their <code>comp-lzo</code> mode however, do not need to be matched. It is generally best to set the <code>comp-lzo</code> mode to <code>adaptive</code> and let OpenVPN decides whether it should be used or not. There are circumstances however that using the module could hurt. In case of uncompressable data (e.g., transferring a zip file), <code>comp-lzo</code> could backfire by increasing the final packet size by 1. We can check the effectiveness of the LZO compression over time by sending <code>SIGUSR2</code> signal to the OpenVPN process (if its running as a daemon, the output would go to the syslog file). With such statistics you could decide whether using compression is useful for your link or not.
 It is also worth noting that although LZO algorithm is fast, it still uses some resources. The algorithm is in such a way that compressing a block would require relatively more resource that decompressing it.

@@ -16,7 +16,9 @@ categories:
 <strong>Step 2:</strong>
 <h4 id="a6bf" class="graf graf--h4 graf-after--pre">Decrypt credentials defined in Jenkins.</h4>
 Paste and Run below script there.
-<pre>def creds = com.cloudbees.plugins.credentials.CredentialsProvider.lookupCredentials(
+```java
+
+def creds = com.cloudbees.plugins.credentials.CredentialsProvider.lookupCredentials(
     com.cloudbees.plugins.credentials.common.StandardUsernameCredentials.class,
     Jenkins.instance,
     null,
@@ -27,6 +29,7 @@ for (c in creds) {
 }
 for (c in creds) {
      println( ( c.properties.password ? "ID: " + c.id + ", UserName: " + c.username + ", Password: " + c.password : ""))
-}</pre>
+}
+```
 
 The above script will decode all the Jenkins credentials and Private keys saved.

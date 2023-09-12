@@ -39,10 +39,9 @@ projects:
     # - repo-name
 
 social_media:
-   facebook: prabuddha.nike13
-   linkedin: prabuddha90
+   medium: prabch
+   linkedin: prabch
    stackoverflow: 4293543/prabuddha-chakraborty
    twitter: _iam404
-   website: https://prabuddha.me
 
 theme: jekyll-theme-minimal
